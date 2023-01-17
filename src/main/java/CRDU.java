@@ -37,7 +37,7 @@ public class CRDU {
 		String prettyJsonString = gson.toJson(je);
 //	System.out.println(prettyJsonString);
 		ApiDbs[] attributs = gson.fromJson(prettyJsonString, ApiDbs[].class);
-
+ 
 		for (ApiDbs x : attributs) {
 			String webpage = x.getWeb_pages()[0];
 			String name = x.getName();
@@ -45,11 +45,9 @@ public class CRDU {
 			String state_province = x.getState_province();
 			String alpha_two_code = x.getAlpha_two_code();
 			String country = x.getCountry();
-
 			String sql = "insert into users(web_pages,state_province, alpha_two_code,name, country,domains)"
 					+ " values('" + webpage + "' ,'" + state_province + "', '" + alpha_two_code + "','" + name + "' ,' "
 					+ domian + "','" + country + "')";
-
 			Connection con = null;
 			try {
 				Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();

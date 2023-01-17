@@ -31,6 +31,7 @@ public class Main {
 			System.out.println("|  [2]INSERT TO THE DB                |");
 			System.out.println("|  [3]UPDATE THE DATA IN DB           |");
 			System.out.println("|  [4]DELETE THE DATA FROM DB         |");
+			System.out.println("|  [5]EXIT                            |");
 			System.out.println(" =====================================");
 			Integer num = sc.nextInt();
 
@@ -47,6 +48,9 @@ public class Main {
 			case 4:
 				CRDU.deleteById();
 				break;
+			case 5 :
+				System.out.println("Thank You");
+				isExitMenu3=false;
 			}
 		}
 	}
