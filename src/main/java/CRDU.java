@@ -18,6 +18,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
+//TODO: Remove unused imports
 public class CRDU {
 	static String url = "jdbc:sqlserver://localhost:1433;databaseName=MavenApi;encrypt=true;trustServerCertificate=true";
 	static String user = "sa";
@@ -72,6 +73,7 @@ public class CRDU {
 	public static void deleteById()
 			throws IOException, InterruptedException, InstantiationException, Throwable, ClassNotFoundException {
 
+		//TODO: Your code can never through these exceptions
 		Scanner sc = new Scanner(System.in);
 
 		Connection con = null;
